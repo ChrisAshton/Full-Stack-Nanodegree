@@ -1,6 +1,4 @@
-*this is a submission for a Full-Stack-Nanodegree offered by [Udacity.com](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004),  
- and in no way should be taken seriously...however, if you feel like running  
-  with the idea...*
+*This is a submission for project 1 of the Full-Stack-Nanodegree offered by [Udacity.com](https://www.udacity.com/course/full-stack-web-developer-nanodegree--nd004)*
 
 # Welcome to Fresh Tomatoes
 
@@ -51,4 +49,4 @@ automated
   - Acessing the list for editing could be accomplished through the browser
   - Storing the list can be done using a database.
 - This application does not reside on a server yet, which would fix most  
-of the currently known issues. 
+of the currently known issues.
