@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  min-width: 200px;
+  min-width: 400px;
+  margin: 0px;
+  padding: 10px;
 }
 
 .intro-header {
@@ -30,39 +32,61 @@ header {
   min-width: 100%;
 }
 
+
+
 #header-name {
   margin-bottom: 1px;
   font-family: "Roboto", sans-serif;
   font-weight: 100;
   font-size: 2em;
+  color: #2d3c49;
 }
 
 #short-description {
   margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #2d3c49;
 }
 
-@media screen and (max-width: 375px) {
-  #header-name {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-size: 1.7em;
-  }
-
-  #short-description {
-    margin-top: 0px;
-    font-size: 1em;
-  }
+hr {
+  height: 2px;
+  border: 0px;
+  border-top: 1px solid #2d3c49;
+  padding: 0;
 }
 
-@media screen and (max-width: 275px) {
-  #header-name {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-size: 1.4em;
-  }
+#features-title {
+  margin-top: 0px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: #7d97ad;
+}
 
-  #short-description {
-    margin-top: 0px;
-    font-size: 0.8em;
-  }
+.all-features-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  background-color:
+}
+
+.feature {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#feature-image {
+  height: 139px;
+  width: 130px;
+}
+
+#feature-description {
+  order: 2;
+  margin-left: 12px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 23px;
+  color: #2d3c49;
 }
