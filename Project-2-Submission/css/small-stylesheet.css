@@ -66,24 +66,26 @@ hr {
 
 .all-features-wrapper {
   display: flex;
-  flex-wrap: wrap;
+
   margin: 5px;
-  background-color:
 }
 
-.feature {
+.image-container {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #7d97ad;
+  width: 140px;
 }
 
 .feature-image {
   height: 139px;
-  width: 130px;
+  width: auto;
 }
 
-#feature-description {
-  order: 2;
+.feature-description {
+  display: flex;
+  align-self: center;
   margin-left: 12px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
