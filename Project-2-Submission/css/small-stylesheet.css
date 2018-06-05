@@ -77,7 +77,7 @@ hr {
   flex-direction: row;
 }
 
-#feature-image {
+.feature-image {
   height: 139px;
   width: 130px;
 }
