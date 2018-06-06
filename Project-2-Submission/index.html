@@ -2,28 +2,32 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <script   src="https://code.jquery.com/jquery-3.3.1.min.js"
-              integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-              crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" media="screen and (max-width: 414px)" href="css/small-stylesheet.css">
-    <link rel="stylesheet" media="screen and (min-width: 415px)" href="css/medium-stylesheet.css">
+    <script type="text/javascript" src="js/javascript.js">
+    </script>
+    <link rel="stylesheet" media="screen and (max-width: 560px)" href="css/small-stylesheet.css">
+    <link rel="stylesheet" media="screen and (min-width: 561px)" href="css/medium-stylesheet.css">
     <title>
       Portfolio
     </title>
   </head>
   <script type="text/javascript">
-
+    $(document).ready(function() {
+      changeFeatureDescriptions();
+      $(window).resize(function () {
+        changeFeatureDescriptions();
+      });
+    });
   </script>
   <body>
 
     <section class="intro-header">
-      <h1 class="float-right" id="header-name">
+      <h1 class="float-right" id="title">
           CHRIS ASHTON
       </h1>
-      <h3 class="float-right clear-right" id="short-description">
+      <h3 class="float-right clear-right" id="subtitle">
         deep in the code
       </h3>
       <hr class="clear-right">
@@ -37,32 +41,32 @@
       Featured Work
     </h2>
 
-    <section class="all-features-wrapper container" id="freshTomatoesSection">
+    <section class="feature-section container" id="freshTomatoesSection">
       <div class="image-container">
         <img src="img/FreshTomatoes.png" alt="Fresh Tomatoes logo" class="feature-image">
       </div>
-      <p class="feature-description container">
+      <p class="feature-description container" id="freshTomatoesDescription">
         Fresh Tomatoes!
       </p>
     </section>
 
-    <section class="all-features-wrapper container" id="gitEnvironmentFeature">
+    <section class="feature-section container" id="gitEnvironmentFeature">
       <div class="image-container container">
         <img src="img/sweet_new_prompt.png" alt="Colorful prompt in bash shell" class="feature-image">
       </div>
-      <p class="feature-description container">
+      <p class="feature-description container" id="perfectGitDescription">
         Perfect Git Environment
       </p>
     </section>
 
-    <section class="all-features-wrapper container" id="spaAppSection">
+    <section class="feature-section container" id="spaAppSection">
       <div class="image-container container">
         <img src="img/spa_laura.jpg" alt="Woman relaxing in the spa" class="feature-image">
       </div>
-      <p class="feature-description container">
+      <p class="feature-description container" id="spaAppDescription">
         Sadona Salon + Spa App
       </p>
-    </section>
+    </section
 
   </body>
 </html>
