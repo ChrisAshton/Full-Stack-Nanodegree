@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+a {
+  color: #2d3c49;
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
 
@@ -56,15 +61,29 @@ hr {
   padding: 0;
 }
 
-#features-title {
-  margin-top: 0px;
+#matrix-code-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  min-width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+}
+
+#matrix-code {
+  align-self: center;
+  width: 100%;
+}
+
+#featuredWorkTitle {
+  margin-top: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.5em;
   color: #7d97ad;
 }
 
-.feature-section {
+.single-feature-section {
   display: flex;
   max-height: 140px;
   margin: 5px;

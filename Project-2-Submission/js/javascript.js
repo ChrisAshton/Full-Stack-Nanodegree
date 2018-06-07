@@ -1,49 +1,93 @@
-
-var freshTomatoesLongDescription = `Fresh Tomatoes!<br>
-                  <span style="font-size:0.7em">
+// Feature descriptions for larger viewports
+var longFreshTomatoesDescription = `
+                <a href="https://github.com/ChrisAshton/Full-Stack-Nanodegree/tree/master/Project-1-Submission">
+                  <span class="shortDescription" style="text-decoration:underline">
+                    Fresh Tomatoes!
+                  </span><br>
+                  <span style="font-size:0.7em" class="additionalDescription">
                     A place where you can bookmark your favorite movies!
-                  </span>`;
+                  </span>
+                </a>`;
 
-var gitEnvironmentLongDescription = `A Perfect Git Environment<br>
-                  <span style="font-size:0.7em">
+var longGitEnvironmentDescription = `
+                <a href="https://github.com/ChrisAshton/git_environment_configs">
+                  <span class="shortDescription" style="text-decoration:underline">
+                    A Perfect Git Environment
+                  </span><br>
+                  <span style="font-size:0.7em" class="additionalDescription">
                     Makes your bash environment beautiful with
                     <em>
                       completions!
                     </em>
-                  </span>`
+                  </span>
+                </a>`;
 
-var spaAppLongDescription = `Sadona Salon + Spa App<br>
-                  <span style="font-size:0.7em">
+var longSpaAppDescription = `
+                <a href="https://github.com/ChrisAshton/Sadona-Salon-and-Spa-iOS-App-">
+                  <span class="shortDescription" style="text-decoration:underline">
+                    Sadona Salon + Spa App
+                  </span><br>
+                  <span style="font-size:0.7em" class="additionalDescription">
                     Helps Sadona's amazing staff stay on top of business!
-                  </span>`
+                  </span>
+                </a>`;
 
-function getViewportSize() {
-  if ($(window).width() < 450) {
-    return "under 451";
-  } else {
-    return "over 450";
-  }
-}
+// Feature descriptions for smaller viewports
+var shortFreshTomatoesDescription = `
+                <a href="https://github.com/ChrisAshton/Full-Stack-Nanodegree/tree/master/Project-1-Submission">
+                  <span class="shortDescription" style="text-decoration:underline">
+                    Fresh Tomatoes!
+                  </span>
+                </a>`;
 
+var shortGitEnvironmentDescription= `
+                <a href="https://github.com/ChrisAshton/git_environment_configs">
+                  <span class="shortDescription" style="text-decoration:underline">
+                    A Perfect Git Environment
+                  </span>
+                </a>`;
+
+var shortSpaAppDescription = `
+                <a href="https://github.com/ChrisAshton/Sadona-Salon-and-Spa-iOS-App-">
+                  <span class="shortDescription" style="text-decoration:underline">
+                    Sadona Salon + Spa App
+                  </span>
+                </a>`;
+
+// Detect viewport width and adjust feature descriptions for size
 function changeFeatureDescriptions() {
-  var viewportSize = getViewportSize();
-  if (viewportSize == "under 451") {
+  var viewportSize = $(window).width();
+  if (viewportSize < 451) {
     makeSmallFeatureDescription();
   }
 
-  if (viewportSize == "over 450") {
+  if (viewportSize > 450) {
     makeLargeFeatureDescription();
   }
 }
 
+// Populate descriptions for medium to large viewports
 function makeLargeFeatureDescription() {
-  $("#freshTomatoesDescription").html(freshTomatoesLongDescription);
-  $("#perfectGitDescription").html(gitEnvironmentLongDescription);
-  $("#spaAppDescription").html(spaAppLongDescription);
+  $("#freshTomatoesDescription").html(longFreshTomatoesDescription);
+  $("#perfectGitDescription").html(longGitEnvironmentDescription);
+  $("#spaAppDescription").html(longSpaAppDescription);
 }
 
+// Populate Descriptions for small viewports
 function makeSmallFeatureDescription() {
-  $("#freshTomatoesDescription").text("Fresh Tomatoes!");
-  $("#perfectGitDescription").text("A Perfect Git Environment");
-  $("#spaAppDescription").text("Sadona Salon + Spa App");
+  $("#freshTomatoesDescription").html(shortFreshTomatoesDescription);
+  $("#perfectGitDescription").html(shortGitEnvironmentDescription);
+  $("#spaAppDescription").html(shortSpaAppDescription);
+}
+
+// Neo!
+function adjustTopPicture() {
+  var windowSize = $(window).width();
+  if (windowSize < 720 && windowSize > 561) {
+    $("#matrix-code").attr('src', 'img/neo_in_matrix.png');
+    $("#matrix-code").attr('alt', 'Neo in the Matrix');
+  } else {
+    $("#matrix-code").attr('src', 'img/matrix-code.jpg');
+    $("#matrix-code").attr('alt', 'Matrix code');
+  }
 }

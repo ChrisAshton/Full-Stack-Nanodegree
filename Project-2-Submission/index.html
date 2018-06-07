@@ -1,72 +1,100 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
   <head>
+
+    <!-- meta calls -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script   src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous">
-    </script>
-    <script type="text/javascript" src="js/javascript.js">
-    </script>
+
+    <!-- script sources -->
+    <script   src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+
+    <!-- All the style sheets this will require per screen sie -->
     <link rel="stylesheet" media="screen and (max-width: 560px)" href="css/small-stylesheet.css">
-    <link rel="stylesheet" media="screen and (min-width: 561px)" href="css/medium-stylesheet.css">
+    <link rel="stylesheet" media="screen and (min-width: 561px) and (max-width: 750px)" href="css/medium-stylesheet.css">
+    <link rel="stylesheet" media="screen and (min-width: 751px)" href="css/large-stylesheet.css">
+
     <title>
       Portfolio
     </title>
+
   </head>
+
+  <!-- Scripts for making responsive changes to page -->
   <script type="text/javascript">
     $(document).ready(function() {
       changeFeatureDescriptions();
       $(window).resize(function () {
         changeFeatureDescriptions();
+        adjustTopPicture();
       });
     });
   </script>
+
   <body>
 
+    <!-- Name of person whose work is featured -->
     <section class="intro-header">
       <h1 class="float-right" id="title">
           CHRIS ASHTON
       </h1>
+
+      <!-- catchy phrase to lighten the mood -->
       <h3 class="float-right clear-right" id="subtitle">
         deep in the code
       </h3>
+
+      <!-- A line to make it classy -->
       <hr class="clear-right">
     </section>
 
-    <section class="clear-right">
-      <img src="img/matrix-code.jpg" width="100%" alt="A picture of Chris Ashton">
+    <!-- Large picture of Matrix code spanning page -->
+    <section class="clear-right" id="matrix-code-container">
+      <img src="img/matrix-code.jpg" alt="Matrix Code" id="matrix-code">
     </section>
 
-    <h2 id="features-title">
-      Featured Work
+    <!-- A phrase to introduce featured work -->
+    <h2 class="float-left" id="featuredWorkTitle">
+      Featured Work...
     </h2>
 
-    <section class="feature-section container" id="freshTomatoesSection">
-      <div class="image-container">
-        <img src="img/FreshTomatoes.png" alt="Fresh Tomatoes logo" class="feature-image">
-      </div>
-      <p class="feature-description container" id="freshTomatoesDescription">
-        Fresh Tomatoes!
-      </p>
+    <!-- The container that holds all of the featured work -->
+    <section class="container clear-left" id="features-container">
+
+      <!-- feature one -->
+      <section class="single-feature-section container" id="freshTomatoesSection">
+        <div class="image-container">
+          <img src="img/FreshTomatoes.png" alt="Fresh Tomatoes logo" class="feature-image">
+        </div>
+        <p class="feature-description container" id="freshTomatoesDescription">
+          Fresh Tomatoes!
+        </p>
+      </section>
+
+      <!-- feature two -->
+      <section class="single-feature-section container" id="gitEnvironmentFeature">
+        <div class="image-container container">
+          <img src="img/sweet_new_prompt.png" alt="Colorful prompt in bash shell" class="feature-image">
+        </div>
+        <p class="feature-description container" id="perfectGitDescription">
+          Perfect Git Environment
+        </p>
+      </section>
+
+      <!-- feature three -->
+      <section class="single-feature-section container" id="spaAppSection">
+        <div class="image-container container">
+          <img src="img/spa_laura.jpg" alt="Woman relaxing in the spa" class="feature-image">
+        </div>
+        <p class="feature-description container" id="spaAppDescription">
+          Sadona Salon + Spa App
+        </p>
+      </section>
+
     </section>
 
-    <section class="feature-section container" id="gitEnvironmentFeature">
-      <div class="image-container container">
-        <img src="img/sweet_new_prompt.png" alt="Colorful prompt in bash shell" class="feature-image">
-      </div>
-      <p class="feature-description container" id="perfectGitDescription">
-        Perfect Git Environment
-      </p>
-    </section>
-
-    <section class="feature-section container" id="spaAppSection">
-      <div class="image-container container">
-        <img src="img/spa_laura.jpg" alt="Woman relaxing in the spa" class="feature-image">
-      </div>
-      <p class="feature-description container" id="spaAppDescription">
-        Sadona Salon + Spa App
-      </p>
-    </section
 
   </body>
 </html>
