@@ -19,6 +19,18 @@ body {
   padding: 10px;
 }
 
+/* method for hiding content for benefit of screen readers copied from
+ https://webaim.org/techniques/css/invisiblecontent/ on 7 June 2018 */
+
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
 .intro-header {
   background-color: rgba(255,255,255,0.6);
   margin-bottom: 1px
